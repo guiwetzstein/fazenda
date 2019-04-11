@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-module.exports = mongoose.connect('mongodb://localhost:27018/db_farm');
+module.exports = mongoose.connect('mongodb://localhost:27018/db_farm', {useNewUrlParser: true});
 
 mongoose.Error.messages.general.required = "O atributo '{PATH}' é obrigatório.";
 mongoose.Error.messages.Number.min = "O '{VALUE}' informado é menor que o limite mínimo de '{MIN}'.";
